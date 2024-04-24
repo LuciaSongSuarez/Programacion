@@ -19,7 +19,7 @@ public class Create {
 
 	public int mostrarMenu() {
 		try {
-			System.out.println("Elige una opcion");
+			System.out.println("Elige una opcion:");
 			System.out.println("1, agregar otra jaula de animales");
 			System.out.println("2, listar jaulas de animales");
 			System.out.println("3, editar alguna jaula de animales");
