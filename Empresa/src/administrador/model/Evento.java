@@ -1,10 +1,10 @@
 package administrador.model;
 
-public class Eventos {
+public class Evento {
 	private String nombreEvento;
 	private int numPersona;
 	private String lugar;
-	public Eventos(String nombreEvento, int numPersona, String lugar) {
+	public Evento(String nombreEvento, int numPersona, String lugar) {
 		super();
 		this.nombreEvento = nombreEvento;
 		this.numPersona = numPersona;

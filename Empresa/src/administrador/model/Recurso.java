@@ -1,10 +1,10 @@
 package administrador.model;
 
-public class Recursos {
+public class Recurso {
 	private String nomRecurso;
 	private int cantidad;
 	private int duracion;
-	public Recursos(String nomRecurso, int cantidad, int duracion) {
+	public Recurso(String nomRecurso, int cantidad, int duracion) {
 		super();
 		this.nomRecurso = nomRecurso;
 		this.cantidad = cantidad;

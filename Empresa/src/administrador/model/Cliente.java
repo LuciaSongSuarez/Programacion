@@ -1,10 +1,10 @@
 package administrador.model;
 
-public class Clientes {
+public class Cliente {
 	private String nombreCliente;
 	private String nombreEmpresa;
 	private Factura factura;
-	public Clientes(String nombreCliente, String nombreEmpresa, Factura factura) {
+	public Cliente(String nombreCliente, String nombreEmpresa, Factura factura) {
 		super();
 		this.nombreCliente = nombreCliente;
 		this.nombreEmpresa = nombreEmpresa;

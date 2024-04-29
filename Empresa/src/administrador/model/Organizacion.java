@@ -1,29 +1,29 @@
 package administrador.model;
 
 public class Organizacion {
-	private Clientes cliente;
-	private Recursos recurso;
-	private Eventos evento;
+	private Cliente clientes;
+	private Recurso recursos;
+	private Evento eventos;
 	private String fecha;
 	//Constructor Organizacion de clientes
-	public Organizacion(Clientes cliente, String fecha) {
+	public Organizacion(Cliente cliente, String fecha) {
 		super();
-		this.cliente = cliente;
+		this.clientes = cliente;
 		this.fecha = fecha;
 	}
 	
 
 	//Constructor Organizacion de recursos
-	public Organizacion(Recursos recurso, String fecha) {
+	public Organizacion(Recurso recurso, String fecha) {
 		super();
-		this.recurso = recurso;
+		this.recursos = recurso;
 		this.fecha = fecha;
 	}
 	
 	//Constructor Organizacion de eventos
-	public Organizacion(Eventos evento, String fecha) {
+	public Organizacion(Evento evento, String fecha) {
 		super();
-		this.evento = evento;
+		this.eventos = evento;
 		this.fecha = fecha;
 	}
 
@@ -31,7 +31,10 @@ public class Organizacion {
 
 	@Override
 	public String toString() {
-		return "Organizacion [cliente=" + cliente + ", recurso=" + recurso + ", evento=" + evento + ", fecha=" + fecha
+		String sCliente=(clientes==null)?"no hay":clientes.toString();
+		String sRecurso=(recursos==null)?"no hay":recursos.toString();
+		String sEvento=(eventos==null)?"no hay":eventos.toString();
+		return "Organizacion [cliente=" + sCliente+ ", recurso=" + sRecurso + ", evento=" + sEvento + ", fecha=" + fecha
 				+ "]";
 	}
 
