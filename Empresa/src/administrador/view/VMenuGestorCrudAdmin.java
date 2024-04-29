@@ -1,7 +1,7 @@
 package administrador.view;
 import java.util.Scanner;
 
-import administrador.model.Personal;
+import administrador.model.PersonalAdmin;
 import administrador.model.Recurso;
 import administrador.model.Organizacion;
 import administrador.model.Cliente;
@@ -61,7 +61,7 @@ public class VMenuGestorCrudAdmin {
 				int duracion=sc.nextInt();
 				System.out.println("Fecha");
 				String fecha=sc.next();
-				gc.create(new Personal(nombre,dep,cargo, new Organizacion(new Recurso(nombreRecurso,cantidad, duracion),fecha)));
+				gc.create(new PersonalAdmin(nombre,dep,cargo, new Organizacion(new Recurso(nombreRecurso,cantidad, duracion),fecha)));
 			}
 			else if(opcion==2) {
 				System.out.println("Nombre Evento");
@@ -72,7 +72,7 @@ public class VMenuGestorCrudAdmin {
 				String lugar=sc.next();
 				System.out.println("Fecha");
 				String fecha=sc.next();
-				gc.create(new Personal(nombre,dep,cargo, new Organizacion(new Evento(nombreEvento,numPersonas, lugar),fecha)));
+				gc.create(new PersonalAdmin(nombre,dep,cargo, new Organizacion(new Evento(nombreEvento,numPersonas, lugar),fecha)));
 			}
 			else if(opcion==3) {
 				System.out.println("Nombre Cliente");
@@ -90,7 +90,7 @@ public class VMenuGestorCrudAdmin {
 					int descuento=sc.nextInt();
 					System.out.println("Fecha");
 					String fecha=sc.next();
-					gc.create(new Personal(nombre,dep,cargo, new Organizacion(new Cliente(nombreCliente,nombreEmpresa, new FacturaDescuento (precio,nombreProyecto,descuento)),fecha)));
+					gc.create(new PersonalAdmin(nombre,dep,cargo, new Organizacion(new Cliente(nombreCliente,nombreEmpresa, new FacturaDescuento (precio,nombreProyecto,descuento)),fecha)));
 				}
 				else if (decision==2) {
 					System.out.println("Total de la factura");
@@ -99,7 +99,7 @@ public class VMenuGestorCrudAdmin {
 					String nombreProyecto=sc.next();
 					System.out.println("Fecha");
 					String fecha=sc.next();
-					gc.create(new Personal(nombre,dep,cargo, new Organizacion(new Cliente(nombreCliente,nombreEmpresa, new Factura(precio,nombreProyecto)),fecha)));
+					gc.create(new PersonalAdmin(nombre,dep,cargo, new Organizacion(new Cliente(nombreCliente,nombreEmpresa, new Factura(precio,nombreProyecto)),fecha)));
 				}
 
 			}
@@ -134,7 +134,7 @@ public class VMenuGestorCrudAdmin {
 				int duracion=sc.nextInt();
 				System.out.println("Fecha");
 				String fecha=sc.next();
-				bRet=gc.update(pos,new Personal(nombre,dep,cargo, new Organizacion(new Recurso(nombreRecurso,cantidad, duracion),fecha)));
+				bRet=gc.update(pos,new PersonalAdmin(nombre,dep,cargo, new Organizacion(new Recurso(nombreRecurso,cantidad, duracion),fecha)));
 			}
 			else if(opcion==2) {
 				System.out.println("Nombre Evento");
@@ -145,7 +145,7 @@ public class VMenuGestorCrudAdmin {
 				String lugar=sc.next();
 				System.out.println("Fecha");
 				String fecha=sc.next();
-				bRet=gc.update(pos,new Personal(nombre,dep,cargo, new Organizacion(new Evento(nombreEvento,numPersonas, lugar),fecha)));
+				bRet=gc.update(pos,new PersonalAdmin(nombre,dep,cargo, new Organizacion(new Evento(nombreEvento,numPersonas, lugar),fecha)));
 			}
 			else if(opcion==3) {
 				System.out.println("Nombre Cliente");
@@ -163,7 +163,7 @@ public class VMenuGestorCrudAdmin {
 					int descuento=sc.nextInt();
 					System.out.println("Fecha");
 					String fecha=sc.next();
-					bRet=gc.update(pos,new Personal(nombre,dep,cargo, new Organizacion(new Cliente(nombreCliente,nombreEmpresa, new FacturaDescuento (precio,nombreProyecto,descuento)),fecha)));
+					bRet=gc.update(pos,new PersonalAdmin(nombre,dep,cargo, new Organizacion(new Cliente(nombreCliente,nombreEmpresa, new FacturaDescuento (precio,nombreProyecto,descuento)),fecha)));
 				}
 				else if (decision==2) {
 					System.out.println("Total de la factura");
@@ -172,7 +172,7 @@ public class VMenuGestorCrudAdmin {
 					String nombreProyecto=sc.next();
 					System.out.println("Fecha");
 					String fecha=sc.next();
-					bRet=gc.update(pos,new Personal(nombre,dep,cargo, new Organizacion(new Cliente(nombreCliente,nombreEmpresa, new Factura(precio,nombreProyecto)),fecha)));
+					bRet=gc.update(pos,new PersonalAdmin(nombre,dep,cargo, new Organizacion(new Cliente(nombreCliente,nombreEmpresa, new Factura(precio,nombreProyecto)),fecha)));
 				}
 			}
 

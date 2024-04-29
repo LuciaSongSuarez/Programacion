@@ -1,19 +1,18 @@
-package administrador.model;
+package MyP.model;
 
 import java.util.List;
 
-
 import common.model.IGestorCrud;
 
-public class GestorCrudAdmin implements IGestorCrud{
-	private List<PersonalAdmin> list;
+public class GestorCrudMyP implements IGestorCrud{
+	private List<PersonalMyP> list;
 
-	public GestorCrudAdmin(List<PersonalAdmin> list) {
+	public GestorCrudMyP(List<PersonalMyP> list) {
 		super();
 		this.list = list;
 	}
 	public void create(Object elemento) {
-		list.add((PersonalAdmin)elemento);
+		list.add((PersonalMyP)elemento);
 	}
 	/**
 	 * @return devuelve la lista
@@ -33,7 +32,7 @@ public class GestorCrudAdmin implements IGestorCrud{
 	public boolean update(int pos, Object e) {
 		boolean bRet=false;
 		if (pos>=0 && pos<list.size()) {
-			list.set(pos, (PersonalAdmin)e);
+			list.set(pos, (PersonalMyP)e);
 			bRet=true;
 		}
 		return bRet;

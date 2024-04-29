@@ -1,12 +1,12 @@
 package administrador.model;
 
-public class Personal {
+public class PersonalAdmin {
 	private String nombre;
 	private String departamento;
 	private String cargo;
 	private Organizacion organizacion;
 	
-	public Personal(String nombre, String departamento, String cargo, Organizacion organizacion) {
+	public PersonalAdmin(String nombre, String departamento, String cargo, Organizacion organizacion) {
 		super();
 		this.nombre = nombre;
 		this.departamento = departamento;
