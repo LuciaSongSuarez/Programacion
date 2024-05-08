@@ -9,7 +9,7 @@ import java.util.Scanner;
 import DeptSeguridad.view.VMenuPrincipalDeptSeg;
 import administrador.model.GestorCrudAdmin;
 import administrador.model.PersonalAdmin;
-import administrador.view.VMenuPrincipalAdmin;
+import administrador.view.VCrudAdmin;
 import common.model.IGestorCrud;
 import common.util.FileUtil;
 import DeptSeguridad.model.Empleado;
@@ -53,7 +53,7 @@ public class VMenuPrincipal {
 		while(opcion!=0) {
 			if (opcion==1) {
 				//Lanzar menu Administracion
-				VMenuPrincipalAdmin principal=new VMenuPrincipalAdmin(gestorAdmin);
+				VCrudAdmin principal=new VCrudAdmin(gestorAdmin);
 				principal.menu();
 			}
 			else if (opcion==2) {
