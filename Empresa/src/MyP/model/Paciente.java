@@ -1,6 +1,6 @@
 package MyP.model;
 
-public class PersonalMyP {
+public class Paciente {
 	private String nombre;
 	private String apellido;
 	private String cargo;
@@ -11,7 +11,7 @@ public class PersonalMyP {
 	 * @param cargo
 	 * @param campañas
 	 */
-	public PersonalMyP(String nombre, String apellido, String cargo, Campaña campañas) {
+	public Paciente(String nombre, String apellido, String cargo, Campaña campañas) {
 		super();
 		this.nombre = nombre;
 		this.apellido = apellido;

@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 import MyP.model.Campaña;
 import MyP.model.Famoso;
-import MyP.model.PersonalMyP;
+import MyP.model.Paciente;
 import MyP.model.Publicidad;
 import MyP.model.PublicidadFamoso;
 import common.model.IGestorCrud;
@@ -75,11 +75,11 @@ public class VMenuGestorCrudMyP {
 				String profesion=sc.next();
 				System.out.println("Genero");
 				String genero=sc.next();
-				gc.create(new PersonalMyP(nombrePersonal, cargo,apellido, new Campaña(nombreCampania,fecha,hora, 
+				gc.create(new Paciente(nombrePersonal, cargo,apellido, new Campaña(nombreCampania,fecha,hora, 
 						new PublicidadFamoso(formato, rrss, new Famoso(nombreFamoso,redSocial,profesion, genero)))));
 			}
 			else if(opcion==2) {
-				gc.create(new PersonalMyP(nombrePersonal, cargo,apellido, new Campaña(nombreCampania,fecha,hora, 
+				gc.create(new Paciente(nombrePersonal, cargo,apellido, new Campaña(nombreCampania,fecha,hora, 
 						new Publicidad(formato,rrss))));
 			}
 
@@ -127,11 +127,11 @@ public class VMenuGestorCrudMyP {
 				String profesion=sc.next();
 				System.out.println("Genero");
 				String genero=sc.next();
-				bRet=gc.update(pos,new PersonalMyP(nombrePersonal, cargo,apellido, new Campaña(nombreCampania,fecha,hora, 
+				bRet=gc.update(pos,new Paciente(nombrePersonal, cargo,apellido, new Campaña(nombreCampania,fecha,hora, 
 						new PublicidadFamoso(formato, rrss, new Famoso(nombreFamoso,redSocial,profesion, genero)))));
 			}
 			else if(opcion==2) {
-				bRet=gc.update(pos,new PersonalMyP(nombrePersonal, cargo,apellido, new Campaña(nombreCampania,fecha,hora, 
+				bRet=gc.update(pos,new Paciente(nombrePersonal, cargo,apellido, new Campaña(nombreCampania,fecha,hora, 
 						new Publicidad(formato,rrss))));
 			}
 

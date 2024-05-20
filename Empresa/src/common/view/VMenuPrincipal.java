@@ -12,7 +12,7 @@ import administrador.view.VMenuPrincipalAdmin;
 import common.model.IGestorCrud;
 import common.util.FileUtil;
 import MyP.model.GestorCrudMyP;
-import MyP.model.PersonalMyP;
+import MyP.model.Paciente;
 import MyP.view.VMenuPrincipalMyP;
 
 
@@ -79,7 +79,7 @@ public class VMenuPrincipal {
 	public static void main(String[] args) {
 		//Lista de sintomas
 		List<PersonalAdmin> listAdmin=new ArrayList<PersonalAdmin>();
-		List<PersonalMyP> listMyP=new ArrayList<PersonalMyP>();
+		List<Paciente> listMyP=new ArrayList<Paciente>();
 		//Lanzar aplicacion
 		VMenuPrincipal principal=new VMenuPrincipal(new GestorCrudAdmin(listAdmin), new GestorCrudMyP(listMyP));
 		
