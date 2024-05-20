@@ -1,3 +1,4 @@
+
 package administrador.view;
 import java.util.Scanner;
 
@@ -25,7 +26,7 @@ public class VDeleteAdmin {
 	 */
 
 	
-	public boolean menu() {
+	public boolean delete() {
 		boolean bRet=false;
 		try {
 			System.out.println("Introduce la pos");
@@ -39,3 +40,4 @@ public class VDeleteAdmin {
 	}
 
 }
+
