@@ -25,7 +25,7 @@ public class VDeleteAdmin {
 	 */
 
 	
-	public boolean delete() {
+	public boolean menu() {
 		boolean bRet=false;
 		try {
 			System.out.println("Introduce la pos");

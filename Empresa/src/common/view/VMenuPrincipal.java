@@ -1,5 +1,4 @@
 package common.view;
-
 import java.util.ArrayList;
 
 
@@ -71,7 +70,7 @@ public class VMenuPrincipal {
 		}
 	} 
 	/**
-	 * menu principal de opciones>
+	 * menu principal de opciones
 	 * @return entero introducido o -1 si hay error
 	 */
 	public int menuOpcion() {

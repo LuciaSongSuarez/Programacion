@@ -1,10 +1,6 @@
 package administrador.view;
-
 import java.util.Scanner;
-
 import common.model.IGestorCrud;
-
-
 public class VCrudAdmin {
 	private Scanner sc;
 	IGestorCrud gestor;
@@ -15,7 +11,7 @@ public class VCrudAdmin {
 
 		public void menu() {
 			//creamos la instancia para pedir los datos
-			VCreateAdmin datos=new VCreateAdmin(gestor);
+	
 			//bucle para pedir datos
 			int opcion=menuOpcion();
 			while(opcion!=0) {
@@ -28,12 +24,12 @@ public class VCrudAdmin {
 					vCreate.menu();
 					}
 				else if (opcion==3){
-					VReadAdmin vCreate=new VReadAdmin(gestor);
-					vCreate.menu();
+					VUpdateAdmin vUpdate=new VUpdateAdmin(gestor);
+					vUpdate.menu();
 					}
 				else if (opcion==4){
-					VUpdateAdmin vCreate=new VUpdateAdmin(gestor);
-					vCreate.menu();
+					VDeleteAdmin vDelete=new VDeleteAdmin(gestor);
+					vDelete.menu();
 					}
 				opcion=menuOpcion();
 			}
