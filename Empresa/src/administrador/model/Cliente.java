@@ -52,6 +52,5 @@ public class Cliente {
 	public void setFactura(Factura factura) {
 		this.factura = factura;
 	}
-	
-	
+
 }
