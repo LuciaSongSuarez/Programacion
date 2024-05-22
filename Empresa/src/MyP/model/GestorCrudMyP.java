@@ -5,14 +5,14 @@ import java.util.List;
 import common.model.IGestorCrud;
 
 public class GestorCrudMyP implements IGestorCrud{
-	private List<Paciente> list;
+	private List<PersonalMyP> list;
 
-	public GestorCrudMyP(List<Paciente> list) {
+	public GestorCrudMyP(List<PersonalMyP> list) {
 		super();
 		this.list = list;
 	}
 	public void create(Object elemento) {
-		list.add((Paciente)elemento);
+		list.add((PersonalMyP)elemento);
 	}
 	/**
 	 * @return devuelve la lista
@@ -32,7 +32,7 @@ public class GestorCrudMyP implements IGestorCrud{
 	public boolean update(int pos, Object e) {
 		boolean bRet=false;
 		if (pos>=0 && pos<list.size()) {
-			list.set(pos, (Paciente)e);
+			list.set(pos, (PersonalMyP)e);
 			bRet=true;
 		}
 		return bRet;

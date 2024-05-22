@@ -19,6 +19,7 @@ public class VCreateAdmin {
 		this.gc = gestor;
 		this.sc = new Scanner(System.in);
 	}
+	
 	@Override
 	public String toString() {
 		return "VMenuGestorCrud [gc=" + gc + ", sc=" + sc + "]";

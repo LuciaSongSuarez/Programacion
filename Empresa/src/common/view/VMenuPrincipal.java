@@ -14,8 +14,8 @@ import common.util.FileUtil;
 import DeptSeguridad.model.Empleado;
 import DeptSeguridad.model.GestorCrudEmpleado;
 import MyP.model.GestorCrudMyP;
-import MyP.model.Paciente;
-import MyP.view.VMenuPrincipalMyP;
+import MyP.model.PersonalMyP;
+import MyP.view.VCrudMyP;
 import departamentoRH.model.EmpleadoRH;
 import departamentoRH.model.GestorCrudRH;
 import departamentoRH.viewDeptRH.VCrudRH;
@@ -45,7 +45,7 @@ public class VMenuPrincipal {
 		gestorRH=igRH;
 		this.sc = new Scanner(System.in);
 	}
-	
+
 
 	/**
 	 * Decide la opcion en funcion del menu
@@ -60,13 +60,13 @@ public class VMenuPrincipal {
 		while(opcion!=0) {
 			if (opcion==1) {
 				//Lanzar menu Administracion
-	
+
 				VCrudAdmin principal=new VCrudAdmin(gestorAdmin);
 				principal.menu();
 			}
 			else if (opcion==2) {
 				//Lanzar menu Marketing y publicidad
-				VMenuPrincipalMyP principal=new VMenuPrincipalMyP(gestorMyP);
+				VCrudMyP principal=new VCrudMyP(gestorMyP);
 				principal.menu();
 			}
 			else if (opcion==3) {
@@ -103,23 +103,19 @@ public class VMenuPrincipal {
 			return -1;
 		}
 	}
-	
+
 	public static void main(String[] args) {
-		
+
 		List<PersonalAdmin> listAdmin=new ArrayList<PersonalAdmin>();
 
-		List<Paciente> listMyP=new ArrayList<Paciente>();
-
 		List<PersonalMyP> listMyP=new ArrayList<PersonalMyP>();
+
 		List<Empleado> listEmpleado=new ArrayList<Empleado>();
-<<<<<<< HEAD
-		VMenuPrincipal principal=new VMenuPrincipal(new GestorCrudAdmin(listAdmin), new GestorCrudMyP(listMyP), new GestorCrudEmpleado(listEmpleado));
-=======
+
 		List<EmpleadoRH> listEmpleadoRH=new ArrayList<EmpleadoRH>();
-		//Lanzar aplicacion
+
 		VMenuPrincipal principal=new VMenuPrincipal(new GestorCrudAdmin(listAdmin), new GestorCrudMyP(listMyP), new GestorCrudEmpleado(listEmpleado), new GestorCrudRH(listEmpleadoRH));
->>>>>>> branch 'Principal' of https://github.com/LuciaSongSuarez/Programacion.git
-		
+
 		principal.menu();
 	}
 }
